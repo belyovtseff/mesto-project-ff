@@ -6,7 +6,8 @@ function handleDeleteCard(cardElement) {
 }
 
 function createCard(cardData, deleteCardCallback) {
-  const cardElement = cardTemplate.content.cloneNode(true).children[0];
+  const cardElement = cardTemplate.content.querySelector('.places__item').cloneNode(true);
+  
   const cardImage = cardElement.querySelector('.card__image');
   const cardTitle = cardElement.querySelector('.card__title');
   const deleteButton = cardElement.querySelector('.card__delete-button');
